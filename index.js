@@ -1,14 +1,10 @@
-setTimeout(function () {
-  console.log(this);
-}, 3000); //(1)
+const person = {
+  name: "elice",
+};
 
-[1, 2, 3, 4, 5].forEach(function (x) {
-  //(2)
-  console.log(this, x);
-});
+function sayHello(message) {
+  console.log(`${message}, ${this.name}`);
+}
 
-document.body.innerHTML += `<button id="a">클릭</button>`;
-document.body.querySelector("#a").addEventListener("click", function (e) {
-  //(3)
-  console.log(this, e);
-});
+const greet = sayHello.bind(person, "Hello");
+greet(); // 출력: Hello, elice
