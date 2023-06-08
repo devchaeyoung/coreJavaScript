@@ -1,7 +1,7 @@
 const array = [1, 2, 3, 4, 5];
 
-function printNum(array) {
-  console.log(array);
+function printNum(num) {
+  console.log(num);
 }
 
-printNum(array);
+array.forEach(printNum);
