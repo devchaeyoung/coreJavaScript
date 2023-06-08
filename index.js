@@ -1,10 +1,7 @@
-const person = {
-  name: "elice",
-};
+const array = [1, 2, 3, 4, 5];
 
-function sayHello(message) {
-  console.log(`${message}, ${this.name}`);
+function printNum(array) {
+  console.log(array);
 }
 
-const greet = sayHello.bind(person, "Hello");
-greet(); // 출력: Hello, elice
+printNum(array);
